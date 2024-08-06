@@ -1,0 +1,75 @@
+-- Create database for the ER
+CREATE DATABASE EmergencyRoomDatabase;
+
+-- Use database
+USE EmergencyRoomDatabase;
+
+-- Create Table with columns
+create table PatientData (
+	patient_id INT,
+	date_time DATE,
+	first_name VARCHAR(50),
+	last_name VARCHAR(50),
+	age INT,
+	insurance_ID VARCHAR(50),
+	systolic_pressure INT,
+	diastolic_pressure INT,
+	heart_rate INT,
+	temperature DECIMAL(6,3),
+	allergies  VARCHAR(10),
+	reason_for_visit VARCHAR(20)
+
+);
+
+--View the created Columns
+SHOW COlUMNS FROM PatientData;
+
+
+--Insert mock patient data 
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (53, '2024-05-24', 'Edyth', 'Stearn', 76, '9E51TW6TN99', 147, 116, 94, 102, 'soy', 'asthma attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (90, '2023-11-18', 'Caryn', 'Bastin', 90, '1X32TX1ER60', 149, 132, 15, 104, 'shellfish', 'burn injury');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (29, '2023-12-16', 'Sela', 'Bunt', 14, '9JT9VF5HR36', 90, 137, 89, 104, 'medications', 'panic attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (43, '2024-04-16', 'Datha', 'Adamczewski', 1, '5Y65A16MH05', 110, 135, 30, 103, 'grass', 'dehydration');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (85, '2023-12-20', 'Suzi', 'Bachman', 20, '5NK9UD9CJ25', 73, 134, 71, 96, 'shellfish', 'broken arm');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (39, '2024-01-28', 'Reine', 'Diamant', 49, '7YY7DY8KG17', 85, 111, 38, 98, 'wheat', 'dehydration');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (27, '2023-09-20', 'Boy', 'MacGhee', 15, '2F86R92GP41', 129, 176, 34, 96, 'penicillin', 'panic attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (31, '2023-12-21', 'Lani', 'Beszant', 79, '6QY3G81VQ42', 104, 143, 88, 101, 'penicillin', 'broken arm');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (98, '2024-03-18', 'Benoite', 'Bielfeldt', 66, '6QC7VM1WP75', 102, 116, 88, 102, 'nickel', 'severe headache');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (33, '2024-06-10', 'Yancy', 'Probate', 15, '4RE5UT5PF57', 153, 172, 96, 99, 'milk', 'appendicitis');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (41, '2023-10-01', 'Chadd', 'Summerly', 17, '2GA9KP2MD28', 131, 128, 31, 100, 'medications', 'sprained ankle');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (25, '2024-06-06', 'Benoit', 'O''Mohun', 13, '1VH2WG3XM53', 117, 92, 31, 103, 'dogs', 'broken arm');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (81, '2024-04-16', 'Marquita', 'Avrahamy', 88, '4XN9EU7TK05', 120, 149, 73, 99, 'milk', 'seizure');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (81, '2024-03-05', 'Sergio', 'Maplethorp', 59, '7N61WW8QU76', 152, 115, 36, 100, 'penicillin', 'sprained ankle');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (89, '2024-06-02', 'Xylia', 'Laughlan', 72, '4HN7TJ3YQ99', 173, 86, 20, 97, 'nickel', 'seizure');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (29, '2023-10-01', 'Merralee', 'Scampion', 60, '1UY3CM1KK72', 143, 84, 51, 97, 'pollen', 'panic attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (37, '2023-11-02', 'Mick', 'Goaks', 19, '1HH6T78PX44', 66, 114, 17, 97, 'insect bites', 'heart attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (56, '2024-06-06', 'Lyssa', 'Tower', 54, '1WW9TJ4YK62', 74, 166, 50, 96, 'grass', 'asthma attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (86, '2024-01-30', 'Corbin', 'Fudger', 60, '1G45QU0NY16', 102, 92, 19, 97, 'cats', 'severe headache');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (37, '2023-11-13', 'Isabella', 'Rosentholer', 49, '2WH2J06VP34', 73, 164, 64, 95, 'shellfish', 'sprained ankle');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (21, '2024-01-16', 'Ferdinanda', 'Tiffin', 56, '6MJ5EC9HU85', 104, 100, 31, 95, 'shellfish', 'concussion');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (60, '2023-10-09', 'Ralph', 'Rugge', 9, '1H27EX7QT12', 123, 148, 31, 104, 'grass', 'seizure');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (21, '2023-10-07', 'Cecily', 'Rounce', 21, '9T94T41FU83', 70, 123, 2, 100, 'latex', 'asthma attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (27, '2023-08-29', 'Aurel', 'Jiru', 47, '7R94KW9PH22', 81, 114, 62, 101, 'shellfish', 'heart attack');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (85, '2023-09-03', 'Brandise', 'Canet', 39, '1EK0CP3FT29', 72, 134, 69, 102, 'pollen', 'food poisoning');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (15, '2024-03-07', 'Erick', 'Mattecot', 30, '6JX8TV8PD28', 67, 140, 24, 99, 'dogs', 'seizure');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (43, '2024-04-28', 'Lidia', 'Leser', 28, '1RY3CF8ET45', 136, 170, 3, 101, 'grass', 'drug overdose');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (38, '2024-03-28', 'Shawna', 'Byres', 31, '7AP5ET1TR07', 95, 138, 41, 103, 'grass', 'burn injury');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (67, '2023-08-15', 'Lorinda', 'Sutor', 6, '4TN4F25UT84', 144, 81, 26, 100, 'bee stings', 'concussion');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (34, '2023-10-25', 'Abrahan', 'Skipworth', 26, '2YC2M45VU39', 112, 140, 76, 99, 'wheat', 'food poisoning');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (52, '2024-04-28', 'Iorgos', 'Plewman', 12, '1C37YV3UH37', 167, 83, 98, 97, 'penicillin', 'allergic reaction');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (8, '2024-03-06', 'Neel', 'Ratie', 72, '5JP3P98WY48', 113, 155, 20, 97, 'peanuts', 'appendicitis');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (73, '2024-01-18', 'Towny', 'Ross', 55, '7RV3M78UE14', 66, 90, 82, 95, 'shellfish', 'drug overdose');
+insert into PatientData (patient_id, date_time, first_name, last_name, age, insurance_id, systolic_pressure, diastolic_pressure, heart_rate, temperature, allergies, reason_for_visit) values (83, '2023-10-02', 'Trula', 'Gulliver', 62, '1WG7YK6WE42', 116, 98, 84, 98, 'milk', 'food poisoning');
+
+
+--Query the Data
+--Which patients have a temperature of 100 degrees??
+SELECT * FROM PatientData WHERE temperature= ‘100’;
+
+--Query the Data
+--Which patients are in the emergency room for a heart attack??
+SELECT * FROM PatientData WHERE reason_for_visit = ‘heart attack’;
+
+--Query the Data
+--Which patients have a shellfish allergy??
+SELECT * FROM PatientData WHERE allergies = ‘shellfish’;
